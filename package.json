@@ -2,6 +2,7 @@
   "private": true,
   "dependencies": {
     "jsdoc": "^3.6.3",
+    "minimist": "^1.2.5",
     "todomvc-app-css": "^2.3.0"
   },
   "devDependencies": {
