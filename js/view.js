@@ -6,7 +6,7 @@
 	/**
 	     * View that abstracts away the browser's DOM completely.
 	     * It has two simple entry points:
-	     *
+	     * @constructs View
 	     *   - bind(eventName, handler)
 	     *     Takes a todo application event and registers the handler
 	     *   - render(command, parameterObject)
@@ -27,6 +27,10 @@
 		this.$newTodo = qs('.new-todo');
 	}
 
+	/**
+	 * Remove an item from the displayed list.
+	 * @param {number} id The ID of the element to remove from the view
+	 */
 	View.prototype._removeItem = function (id) {
 		var elem = qs('[data-id="' + id + '"]');
 
@@ -58,6 +62,10 @@
 		qs('input', listItem).checked = completed;
 	};
 
+	/**
+	 * Edit an item in the displayed list.
+	 * @param {number} id The ID of the element to edit
+	 */
 	View.prototype._editItem = function (id, title) {
 		var listItem = qs('[data-id="' + id + '"]');
 
