@@ -3,8 +3,7 @@
 
 	/**
 	 * Takes a model and view and acts as the controller between them
-	 *
-	 * @constructor
+	 * @constructs Controller
 	 * @param {object} model The model instance
 	 * @param {object} view The view instance
 	 */
@@ -48,7 +47,6 @@
 
 	/**
 	 * Loads and initialises the view
-	 *
 	 * @param {string} '' | 'active' | 'completed'
 	 */
 	Controller.prototype.setView = function (locationHash) {
@@ -105,7 +103,7 @@
 		});
 	};
 
-	/*
+	/**
 	 * Triggers the item editing mode.
 	 */
 	Controller.prototype.editItem = function (id) {
@@ -115,7 +113,7 @@
 		});
 	};
 
-	/*
+	/**
 	 * Finishes the item editing mode successfully.
 	 */
 	Controller.prototype.editItemSave = function (id, title) {
@@ -138,7 +136,7 @@
 		}
 	};
 
-	/*
+	/**
 	 * Cancels the item editing mode.
 	 */
 	Controller.prototype.editItemCancel = function (id) {
@@ -151,7 +149,6 @@
 	/**
 	 * By giving it an ID it'll find the DOM element matching that ID,
 	 * remove it from the DOM and also remove it from storage.
-	 *
 	 * @param {number} id The ID of the item to remove from the DOM and
 	 * storage
 	 */
@@ -186,7 +183,6 @@
 	/**
 	 * Give it an ID of a model and a checkbox and it will update the item
 	 * in storage based on the checkbox's state.
-	 *
 	 * @param {number} id The ID of the element to complete or uncomplete
 	 * @param {object} checkbox The checkbox to check the state of complete
 	 *                          or not
